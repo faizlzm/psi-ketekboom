@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KetekBoom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>🐵 KetekBoom 🐵</h1>
+            <div class="status-text" id="statusText">Monyet sedang santai</div>
+        </div>
+
+        <div class="main-content-wrapper">
+            <div class="monkey-section">
+                <div class="message" id="message"></div> <div class="monkey-area" id="monkeyArea">
+                    <div class="monkey" id="monkey">🐵</div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="stats-container">
+                    <div class="stat-bar">
+                        <div class="stat-label">
+                            <span class="stat-name">❤️ Nyawa</span>
+                            <span class="stat-value" id="lifeValue">100</span>
+                        </div>
+                        <div class="stat-progress">
+                            <div class="stat-fill life-fill" id="lifeFill" style="width: 100%"></div>
+                        </div>
+                    </div>
+
+                    <div class="stat-bar">
+                        <div class="stat-label">
+                            <span class="stat-name">😊 Mood</span>
+                            <span class="stat-value" id="moodValue">70</span>
+                        </div>
+                        <div class="stat-progress">
+                            <div class="stat-fill mood-fill" id="moodFill" style="width: 70%"></div>
+                        </div>
+                    </div>
+
+                    <div class="stat-bar">
+                        <div class="stat-label">
+                            <span class="stat-name">⚡ Energi</span>
+                            <span class="stat-value" id="energyValue">100</span>
+                        </div>
+                        <div class="stat-progress">
+                            <div class="stat-fill energy-fill" id="energyFill" style="width: 100%"></div>
+                        </div>
+                    </div>
+
+                    <div class="stat-bar">
+                        <div class="stat-label">
+                            <span class="stat-name">🍌 Lapar</span>
+                            <span class="stat-value" id="hungerValue">0</span>
+                        </div>
+                        <div class="stat-progress">
+                            <div class="stat-fill hunger-fill" id="hungerFill" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="stat-bar">
+                        <div class="stat-label">
+                            <span class="stat-name">🛁 Kebersihan</span>
+                            <span class="stat-value" id="cleanlinessValue">100</span>
+                        </div>
+                        <div class="stat-progress">
+                            <div class="stat-fill cleanliness-fill" id="cleanlinessFill" style="width: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button class="control-btn" id="feedBtn">
+                        <span class="btn-icon">🍌</span>
+                        <span>Beri Makan</span>
+                    </button>
+                    <button class="control-btn" id="sleepBtn">
+                        <span class="btn-icon">😴</span>
+                        <span>Tidur</span>
+                    </button>
+                    <button class="control-btn" id="playBtn">
+                        <span class="btn-icon">🎮</span>
+                        <span>Main</span>
+                    </button>
+                    <button class="control-btn" id="batheBtn">
+                        <span class="btn-icon">🛁</span>
+                        <span>Mandi</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-over" id="gameOver">
+            <h2>💀 Game Over</h2>
+            <p>Monyet kesayanganmu telah meninggal...</p>
+            <p>Jangan lupa merawatnya dengan baik!</p>
+            <button class="restart-btn" id="restartBtn">🔄 Main Lagi</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
