@@ -54,6 +54,7 @@ body {
   flex: 2;
   display: flex;
   flex-direction: column;
+  position: relative; /* <-- PERUBAHAN DI SINI */
 }
 
 .sidebar-section {
@@ -103,7 +104,7 @@ body {
 }
 
 .monkey.sedang-bermain #monkeyImage {
-  display: none; /* Menyembunyikan gambar monyet saat bermain */
+  display: none;
 }
 
 .stats-container {
@@ -247,15 +248,21 @@ body {
   background: #ff526f;
 }
 
+/* --- BLOK INI DIUBAH TOTAL --- */
 .message {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  z-index: 100;
+
   text-align: center;
   padding: 12px 20px;
-  margin: 0 20px 15px 20px;
   border-radius: 10px;
   font-size: 15px;
   font-weight: bold;
   display: none;
-  order: -1;
 }
 
 .message.show {
