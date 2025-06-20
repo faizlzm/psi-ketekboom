@@ -34,7 +34,7 @@ class VirtualMonkey {
     this.setupEventListeners();
     this.updateDisplay();
     this.startDegradation();
-    this.updateMonkeyAppearance(); // Memastikan gambar awal dimuat dengan benar
+    this.updateMonkeyAppearance();
   }
 
   initializeElements() {
@@ -257,20 +257,16 @@ class VirtualMonkey {
   updateMonkeyAppearance() {
     const state = this.currentState;
 
-    // Atur sumber gambar monyet, gunakan 'idle' jika state tidak ditemukan
     const monkeySrc =
       this.assetPaths.monkey[state] || this.assetPaths.monkey.idle;
     this.monkeyImage.src = monkeySrc;
 
-    // Atur gambar latar belakang, gunakan 'idle' jika state tidak ditemukan
     const backgroundUrl =
       this.assetPaths.background[state] || this.assetPaths.background.idle;
     this.monkeyArea.style.backgroundImage = `url('${backgroundUrl}')`;
 
-    // Hapus kelas-kelas spesifik status sebelumnya untuk reset
     this.monkey.classList.remove("dead", "sedang-bermain");
 
-    // Terapkan kelas yang sesuai untuk status saat ini
     if (state === "dead") {
       this.monkey.classList.add("dead");
     } else if (state === "playing") {
@@ -498,7 +494,7 @@ class VirtualMonkey {
       clearTimeout(this.messageTimeout);
       this.messageTimeout = null;
     }
-    this.updateMonkeyAppearance(); // Perbarui ke gambar 'dead'
+    this.updateMonkeyAppearance();
     this.statusText.textContent = "Mati - Monyet kesayanganmu telah tiada...";
   }
 
