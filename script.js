@@ -258,7 +258,9 @@ class VirtualMonkey {
     const state = this.currentState;
 
     const monkeySrc =
-      this.assetPaths.monkey[state] || this.assetPaths.monkey.idle;
+      state === "hungry"
+        ? this.assetPaths.monkey.idle
+        : this.assetPaths.monkey[state] || this.assetPaths.monkey.idle;
     this.monkeyImage.src = monkeySrc;
 
     const backgroundUrl =
