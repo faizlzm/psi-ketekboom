@@ -100,7 +100,7 @@ body {
 
 .monkey.dead #monkeyImage {
   opacity: 0.6;
-  transform: rotate(90deg) scale(0.9);
+  transform: rotate(-90deg) scale(0.9);
 }
 
 .monkey.sedang-bermain #monkeyImage {
